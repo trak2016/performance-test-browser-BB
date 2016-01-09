@@ -5,6 +5,7 @@ use common\models\User;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use Yii;
+use yii\gii\TypeAheadAsset;
 
 /**
  * This is the model class for table "{{%article}}".
@@ -18,6 +19,8 @@ use Yii;
  * @property integer $category
  * @property integer $created_at
  * @property integer $updated_at
+ * @property string $type
+ * @property integer $parent
  *
  * @property User $user
  */
@@ -26,9 +29,13 @@ class Article extends ActiveRecord
     const STATUS_DRAFT = 1;
     const STATUS_PUBLISHED = 2;
 
-    const CATEGORY_ECONOMY = 1;
-    const CATEGORY_SOCIETY = 2;
-    const CATEGORY_SPORT = 3;
+    const WIDGET = 1;
+    const PERFORMANCE = 2;
+    const FRAMEWORK = 3;
+    
+    const CODE = 1;
+    const BITMAP = 2;
+    const TEXT = 3;
 
     /**
      * Declares the name of the database table associated with this AR class.
@@ -49,8 +56,8 @@ class Article extends ActiveRecord
     {
         return [
             [['user_id', 'title', 'summary', 'content', 'status'], 'required'],
-            [['user_id', 'status', 'category'], 'integer'],
-            [['summary', 'content'], 'string'],
+            [['user_id', 'status', 'category','parent'], 'integer'],
+            [['summary', 'content','type'], 'string'],
             [['title'], 'string', 'max' => 255]
         ];
     }
@@ -84,6 +91,8 @@ class Article extends ActiveRecord
             'category' => Yii::t('app', 'Category'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
+            'type' => Yii::t('app', 'Type'),
+            'parent' => Yii::t('app', 'Parent'),
         ];
     }
 
@@ -161,17 +170,17 @@ class Article extends ActiveRecord
     {
         $category = (empty($category)) ? $this->category : $category ;
 
-        if ($category === self::CATEGORY_ECONOMY)
+        if ($category === self::WIDGET)
         {
-            return Yii::t('app', 'Economy');
+            return Yii::t('app', 'Widget');
         }
-        elseif ($category === self::CATEGORY_SOCIETY)
+        elseif ($category === self::PERFORMANCE)
         {
-            return Yii::t('app', 'Society');
+            return Yii::t('app', 'Performance');
         }
         else
         {
-            return Yii::t('app', 'Sport');
+            return Yii::t('app', 'Framework');
         }
     }
 
@@ -183,11 +192,66 @@ class Article extends ActiveRecord
     public function getCategoryList()
     {
         $statusArray = [
-            self::CATEGORY_ECONOMY => Yii::t('app', 'Economy'),
-            self::CATEGORY_SOCIETY => Yii::t('app', 'Society'),
-            self::CATEGORY_SPORT   => Yii::t('app', 'Sport'),
+            self::WIDGET => Yii::t('app', 'Widget'),
+            self::PERFORMANCE => Yii::t('app', 'Performance'),
+            self::FRAMEWORK   => Yii::t('app', 'Framework'),
         ];
 
         return $statusArray;
     }
+    
+    /**
+     * Returns the array of possible types values.
+     *
+     * @return array
+     */
+    public function getTypeList()
+    {
+    	$typeList = [
+    	self::CODE => Yii::t('app', 'Code'),
+    	self::BITMAP => Yii::t('app', 'Bitmap'),
+    	self::TEXT   => Yii::t('app', 'Text'),
+    	];
+    
+    	return $typeList;
+    }
+    
+    /**
+     * Returns the article category in nice format.
+     *
+     * @param  null|integer $type Types integer value if sent to method.
+     * @return string                 Nicely formatted types.
+     */
+    public function getTypeName($type = null)
+    {
+    	if ($type == self::CODE)
+    	{
+    		return Yii::t('app', 'Code');
+    	}
+    	elseif ($type == self::BITMAP)
+    	{
+    		return Yii::t('app', 'Bitmap');
+    	}
+    	elseif ($type == self::TEXT)
+    	{
+    		return Yii::t('app', 'Text');
+    	}
+    	else {
+    		return Yii::t('app', '');
+    	}
+    }
+    																							
+    /**
+     * Gets the parent name from the related User table.
+     *
+     * @return mixed
+     */
+    public function getParentName()
+    {
+    	if($this->parent==null)
+    		return "brak";
+    	else
+    	return $this->parent;
+    }
+    
 }

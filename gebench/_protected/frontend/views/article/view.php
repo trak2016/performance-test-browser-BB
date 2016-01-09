@@ -63,6 +63,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->categoryName,
             ],
             'created_at:dateTime',
+            'type',
+            'parent'
             //'updated_at:dateTime',
         ],
     ]) ?>

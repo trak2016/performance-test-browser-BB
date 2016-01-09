@@ -18,6 +18,8 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'content')->widget(CKEditor::className(),
             ['editorOptions' => [ 'preset' => 'full', 'inline' => false]]); ?>
+            
+    
 
     <div class="row">
     <div class="col-lg-6">
@@ -25,6 +27,8 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'status')->dropDownList($model->statusList) ?>
 
         <?= $form->field($model, 'category')->dropDownList($model->categoryList) ?>
+        
+        <?= $form->field($model, 'type')->dropDownList($model->typeList) ?>
 
     </div>
     </div> 

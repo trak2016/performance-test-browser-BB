@@ -18,8 +18,8 @@ class ArticleSearch extends Article
     public function rules()
     {
         return [
-            [['id', 'user_id', 'status', 'category', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'summary', 'content'], 'safe'],
+            [['id', 'user_id', 'status', 'category', 'created_at', 'updated_at','parent'], 'integer'],
+            [['title', 'summary', 'content','type'], 'safe'],
         ];
     }
 
@@ -43,7 +43,7 @@ class ArticleSearch extends Article
      *
      * @return ActiveDataProvider
      */
-    public function search($params, $pageSize = 3, $published = false)
+    public function search($params, $pageSize = 3, $published = false, $parent = 0)
     {
         $query = Article::find();
 
@@ -53,6 +53,7 @@ class ArticleSearch extends Article
         {
             $query->where(['status' => Article::STATUS_PUBLISHED]);
             $query->orWhere(['user_id' => Yii::$app->user->id]);
+           // $query->orWhere(['parent' => $parent]);
         }
 
         $dataProvider = new ActiveDataProvider([
@@ -72,11 +73,17 @@ class ArticleSearch extends Article
             'user_id' => $this->user_id,
             'status' => $this->status,
             'category' => $this->category,
+        		'parent' => $this->parent,
+        	//'type' => $this->type,
+        		
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
               ->andFilterWhere(['like', 'summary', $this->summary])
-              ->andFilterWhere(['like', 'content', $this->content]);
+              ->andFilterWhere(['like', 'content', $this->content])
+              ->andFilterWhere(['like', 'type', $this->type])
+              ->andFilterWhere(['like', 'parent', $this->parent])
+        ;
 
         return $dataProvider;
     }

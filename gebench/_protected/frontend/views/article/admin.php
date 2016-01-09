@@ -2,6 +2,7 @@
 use common\helpers\CssHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use nenad\InputWidget;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ArticleSearch */
@@ -9,15 +10,18 @@ use yii\grid\GridView;
 
 $this->title = Yii::t('app', 'Articles');
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="articles-admin">
-
+	
     <h1>
 
     <?= Html::encode($this->title) ?>
 
     <span class="pull-right">
         <?= Html::a(Yii::t('app', 'Create Article'), ['create'], ['class' => 'btn btn-success']) ?>
+         <?= Html::a(Yii::t('app', 'Filter'), ['create'], ['class' => 'btn btn-success']) ?>
+  	
     </span>  
 
     </h1>
@@ -41,14 +45,14 @@ $this->params['breadcrumbs'][] = $this->title;
             // status
             [
                 'attribute'=>'status',
-                'filter' => $searchModel->statusList,
-                'value' => function ($data) {
-                    return $data->getStatusName($data->status);
-                },
-                'contentOptions'=>function($model, $key, $index, $column) {
-                    return ['class'=>CssHelper::articleStatusCss($model->statusName)];
-                }
-            ],
+	                'filter' => $searchModel->statusList,
+	                'value' => function ($data) {
+	                    return $data->getStatusName($data->status);
+	                },
+	                'contentOptions'=>function($model, $key, $index, $column) {
+	                    return ['class'=>CssHelper::articleStatusCss($model->statusName)];
+	                }
+	            ],
             [
                 'attribute'=>'category',
                 'filter' => $searchModel->categoryList,
@@ -59,7 +63,25 @@ $this->params['breadcrumbs'][] = $this->title;
                     return ['class'=>CssHelper::articleCategoryCss($model->categoryName)];
                 }
             ],
-
+            // type
+            [
+            'attribute'=>'type',
+            'filter' => $searchModel->typeList,
+            'value' => function ($data) {
+            	return $data->getTypeName($data->type);
+            },
+            'contentOptions'=>function($model, $key, $index, $column) {
+            	return ['class'=>CssHelper::articleCategoryCss($model->typeName)];
+            }
+            ],
+            // parent
+            [
+            'attribute'=>'parent',
+            'value' => function ($data) {
+            	return $data->getParentName();
+            },
+            ],
+            
             ['class' => 'yii\grid\ActionColumn',
             'header' => Yii::t('app', 'Menu')],
         ],

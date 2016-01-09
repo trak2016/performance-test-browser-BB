@@ -42,6 +42,7 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => Yii::t('app', 'Articles'), 'url' => ['/article/index']];
                 $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']];
                 $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
+                $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
             }
 
             // display Article admin page to editor+ roles
