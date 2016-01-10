@@ -2,6 +2,7 @@
 use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use giovdk21\yii2SyntaxHighlighter\SyntaxHighlighter as SyntaxHighlighter;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Article */
@@ -44,5 +45,23 @@ use yii\widgets\ActiveForm;
     </div>
 
     <?php ActiveForm::end(); ?>
+    
+    <?php SyntaxHighlighter::begin(['brushes' => ['php']]);
+		echo SyntaxHighlighter::getBlock('        
+		bg = new Image(bgTex);
+        bg.setPosition(Utils.WIDTH / 2 - bg.getWidth() / 2, Utils.HEIGHT / 2 - bg.getHeight()/2);
+        bg.setPosition(0 - bg.getWidth() / 2, -bg.getHeight() / 2);
+        addActor(bg);
+
+        digit = new Image(digitTex);
+        digit.setPosition(Utils.WIDTH / 2 - digit.getWidth() / 2, Utils.HEIGHT / 2 - digit.getHeight() );
+        digit.setPosition(-digit.getWidth() / 2, -digit.getHeight());
+        addActor(digit);
+
+        PolygonSpriteBatch polygonSpriteBatch = new PolygonSpriteBatch();
+        radialSprite = new ProgressCircle(circleTex,polygonSpriteBatch );
+        radialSprite.setPosition(Utils.WIDTH / 2 - radialSprite.getWidth() / 2, Utils.HEIGHT / 2 - radialSprite.getHeight() / 2);
+', 'php');
+SyntaxHighlighter::end(); ?>
 
 </div>

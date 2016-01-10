@@ -84,4 +84,13 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+  'giovdk21/yii2-syntaxhighlighter' => 
+  array (
+    'name' => 'giovdk21/yii2-syntaxhighlighter',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@giovdk21/yii2SyntaxHighlighter' => $vendorDir . '/giovdk21/yii2-syntaxhighlighter',
+    ),
+  ),
 );

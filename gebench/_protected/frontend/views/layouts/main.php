@@ -12,6 +12,9 @@ use yii\widgets\Breadcrumbs;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
+
+
+
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -22,6 +25,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+<script type="text/javascript">SyntaxHighlighter.all()</script>
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
