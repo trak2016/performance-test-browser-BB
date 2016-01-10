@@ -48,7 +48,7 @@ use giovdk21\yii2SyntaxHighlighter\SyntaxHighlighter as SyntaxHighlighter;
     
     <?php SyntaxHighlighter::begin(['brushes' => ['php']]);
 		echo SyntaxHighlighter::getBlock('        
-		put your code here
+		sample code
 ', 'php');
 SyntaxHighlighter::end(); ?>
 
