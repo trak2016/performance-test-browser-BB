@@ -43,7 +43,7 @@ class ArticleSearch extends Article
      *
      * @return ActiveDataProvider
      */
-    public function search($params, $pageSize = 3, $published = false, $parent = 0)
+    public function search($params, $pageSize = 10, $published = false, $parent = 0)
     {
         $query = Article::find();
 
@@ -53,7 +53,7 @@ class ArticleSearch extends Article
         {
             $query->where(['status' => Article::STATUS_PUBLISHED]);
             $query->orWhere(['user_id' => Yii::$app->user->id]);
-           // $query->orWhere(['parent' => $parent]);
+            $query->andWhere(['parent' => $parent]);
         }
 
         $dataProvider = new ActiveDataProvider([
@@ -86,5 +86,19 @@ class ArticleSearch extends Article
         ;
 
         return $dataProvider;
+    }
+    
+    public function getArtcilesByParent($parentId){
+
+    	$query = Article::find();
+    	$query->where(['id' => $parentId]);
+    	
+    	$dataProvider = new ActiveDataProvider([
+    			'query' => $query,
+    			]);
+    	
+    	
+    	return $dataProvider;
+    	
     }
 }

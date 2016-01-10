@@ -254,4 +254,6 @@ class Article extends ActiveRecord
     	return $this->parent;
     }
     
+    
+
 }

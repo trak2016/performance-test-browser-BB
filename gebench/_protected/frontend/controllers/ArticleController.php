@@ -6,6 +6,7 @@ use frontend\models\ArticleSearch;
 use yii\web\NotFoundHttpException;
 use yii\web\MethodNotAllowedHttpException;
 use Yii;
+use yii\data\ActiveDataProvider;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -48,8 +49,24 @@ class ArticleController extends FrontendController
      */
     public function actionView($id)
     {
+    	
+    	//$query = $this->findChildrens($id);
+    	$query = Article::find();
+    	$query->where(['parent' => $id]);
+    	//var_dump($query);
+    	
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'sort'=> ['defaultOrder' => ['id' => SORT_DESC]],
+            'pagination' => [
+                'pageSize' => 10,
+            ]
+        ]);
+        
+    	//var_dump($dataProvider);
+    	
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($id), 'childrens' => $dataProvider
         ]);
     }
 
@@ -173,5 +190,14 @@ class ArticleController extends FrontendController
         {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+    
+    protected function findChildrens($id){
+    	
+    	
+    	$query = Article::find()->where(['parent' => $id])->all();
+    	
+    	return $query;
+    	
     }
 }

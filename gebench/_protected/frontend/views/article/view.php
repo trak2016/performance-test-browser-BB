@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Article */
@@ -43,14 +44,31 @@ $this->params['breadcrumbs'][] = $this->title;
 
     </h1>
 
+    
+    <?= ListView::widget([
+		'dataProvider' => $childrens,
+		'options' => [
+		'tag' => 'div',
+		'class' => 'list-wrapper',
+		'id' => 'list-wrapper',
+		],
+		'layout' => "{pager}\n{items}\n{summary}",
+   		'itemView' => function ($model, $key, $index, $widget) {
+        return $this->render('_list_item',['model' => $model]);
+        
+        // or just do some echo
+        // return $model->title . ' posted by ' . $model->author;
+    },
+    ])?>
+    
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            //'id',
-            // [
-            //     'label' => Yii::t('app', 'Author'),
-            //     'value' => $model->authorName,
-            // ],
+            'id',
+            [
+                'label' => Yii::t('app', 'Author'),
+                'value' => $model->authorName,
+            ],
             'title',
             'summary:ntext',
             'content:html',

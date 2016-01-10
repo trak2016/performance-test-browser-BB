@@ -29,6 +29,8 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'category')->dropDownList($model->categoryList) ?>
         
         <?= $form->field($model, 'type')->dropDownList($model->typeList) ?>
+        
+        <?= $form->field($model, 'parent')->textInput(['maxlength' => 255]) ?>
 
     </div>
     </div> 
