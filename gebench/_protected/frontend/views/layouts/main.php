@@ -25,7 +25,33 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<script type="text/javascript">SyntaxHighlighter.all()</script>
+<link type="text/css" rel="stylesheet" href="/themes/syntaxhighlight/css/shCoreRDark.css"/>
+	<link type="text/css" rel="stylesheet" href="/themes/syntaxhighlight/css/shThemeRDark.css"/>	
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shCore.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushA3.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushBash.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushColdFusion.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushCpp.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushCSharp.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushCss.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushDelphi.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushDiff.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushErlang.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushGroovy.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushJava.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushJavaFX.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushPerl.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushPhp.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushPlain.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushPowerShell.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushPython.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushRuby.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushScala.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushSql.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushVb.js"></script>
+	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushXml.js"></script>	
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
