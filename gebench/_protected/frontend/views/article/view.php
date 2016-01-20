@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\widgets\ListView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Article */
@@ -12,7 +13,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-view">
 
-    <h1><?= Html::encode($this->title) ?>
+	<?php if ($model->parent): ?>
+    <a href=<?= Url::to(['article/view', 'id' => $model->parent]) ?>><?= Yii::t('app', 'Go to "Parent\'s" Article') ?></a>
+	<?php endif ?>
+	
+	<h1><?= Html::encode($this->title) ?>
 
     <div class="pull-right">
 
@@ -43,48 +48,58 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     </h1>
-
-    
-    <?= ListView::widget([
+	
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            //'id',
+            //[
+            //    'label' => Yii::t('app', 'Author'),
+            //    'value' => $model->authorName,
+            //],
+            //'title',
+            'summary:ntext',
+            //'content:html',
+            // [
+            //     'label' => Yii::t('app', 'Status'),
+            //     'value' => $model->statusName,
+            // ],
+            //[
+            //    'label' => Yii::t('app', 'Category'),
+            //    'value' => $model->categoryName,
+            //],
+            //'created_at:dateTime',
+            //'type',
+            //'parent'
+            //'updated_at:dateTime',
+        ],
+    ]) ?>
+		
+	<?= $model->content; ?>
+	<h6>
+	<?= Yii::t('app', 'Related "Children\'s" Articles:') ?>
+    </h6>
+		
+	<?= ListView::widget([
 		'dataProvider' => $childrens,
 		'options' => [
 		'tag' => 'div',
 		'class' => 'list-wrapper',
 		'id' => 'list-wrapper',
 		],
-		'layout' => "{pager}\n{items}\n{summary}",
+		'layout' => "{pager}\n{items}\n",
    		'itemView' => function ($model, $key, $index, $widget) {
         return $this->render('_list_item',['model' => $model]);
-        
-        // or just do some echo
-        // return $model->title . ' posted by ' . $model->author;
     },
-    ])?>
-    
-    <?= DetailView::widget([
+    ])?>	
+	
+	<!-- Testing part - Can be deleted 
+	<small>
+	<?= '</br>Temporary record info: for testing only'?>
+	<?= DetailView::widget([
         'model' => $model,
-        'attributes' => [
-            'id',
-            [
-                'label' => Yii::t('app', 'Author'),
-                'value' => $model->authorName,
-            ],
-            'title',
-            'summary:ntext',
-            'content:html',
-            // [
-            //     'label' => Yii::t('app', 'Status'),
-            //     'value' => $model->statusName,
-            // ],
-            [
-                'label' => Yii::t('app', 'Category'),
-                'value' => $model->categoryName,
-            ],
-            'created_at:dateTime',
-            'type',
-            'parent'
-            //'updated_at:dateTime',
-        ],
     ]) ?>
-
+	</small>
+	 end of Testing part -->	
+	
 </div>

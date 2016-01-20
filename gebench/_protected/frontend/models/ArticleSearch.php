@@ -73,7 +73,7 @@ class ArticleSearch extends Article
             'user_id' => $this->user_id,
             'status' => $this->status,
             'category' => $this->category,
-        		'parent' => $this->parent,
+        	'parent' => $this->parent,
         	//'type' => $this->type,
         		
         ]);

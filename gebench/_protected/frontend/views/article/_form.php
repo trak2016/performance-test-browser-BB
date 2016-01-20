@@ -46,10 +46,10 @@ use giovdk21\yii2SyntaxHighlighter\SyntaxHighlighter as SyntaxHighlighter;
 
     <?php ActiveForm::end(); ?>
     
-    <?php SyntaxHighlighter::begin(['brushes' => ['php']]);
+    <?php /*SyntaxHighlighter::begin(['brushes' => ['php']]);
 		echo SyntaxHighlighter::getBlock('        
 		sample code
 ', 'php');
-SyntaxHighlighter::end(); ?>
+SyntaxHighlighter::end();*/ ?>
 
 </div>

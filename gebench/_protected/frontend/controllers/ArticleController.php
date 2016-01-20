@@ -24,7 +24,7 @@ class ArticleController extends FrontendController
          * How many articles we want to display per page.
          * @var integer
          */
-        $pageSize = 2;
+        $pageSize = 5;//2;
 
         /**
          * Articles have to be published.
@@ -49,15 +49,15 @@ class ArticleController extends FrontendController
      */
     public function actionView($id)
     {
-    	
-    	//$query = $this->findChildrens($id);
+    			
+		//$query = $this->findChildrens($id);
     	$query = Article::find();
     	$query->where(['parent' => $id]);
     	//var_dump($query);
     	
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['id' => SORT_DESC]],
+            'sort'=> ['defaultOrder' => ['id' => SORT_ASC]],
             'pagination' => [
                 'pageSize' => 10,
             ]

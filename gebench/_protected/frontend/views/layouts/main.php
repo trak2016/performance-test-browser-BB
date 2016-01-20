@@ -23,9 +23,8 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-</head>
-<body>
-<link type="text/css" rel="stylesheet" href="/themes/syntaxhighlight/css/shCoreRDark.css"/>
+	<!-- Syntaxhighlight EXTENSION -->
+	<link type="text/css" rel="stylesheet" href="/themes/syntaxhighlight/css/shCoreRDark.css"/>
 	<link type="text/css" rel="stylesheet" href="/themes/syntaxhighlight/css/shThemeRDark.css"/>	
 	<script type="text/javascript" src="/themes/syntaxhighlight/js/shCore.js"></script>
 	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushA3.js"></script>
@@ -52,6 +51,10 @@ AppAsset::register($this);
 	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushVb.js"></script>
 	<script type="text/javascript" src="/themes/syntaxhighlight/js/shBrushXml.js"></script>	
 	<script type="text/javascript">SyntaxHighlighter.all();</script>
+	<!-- end of Syntaxhighlight EXTENSION -->
+</head>
+<body>
+<script type="text/javascript">SyntaxHighlighter.all()</script>
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
@@ -71,7 +74,6 @@ AppAsset::register($this);
             {
                 $menuItems[] = ['label' => Yii::t('app', 'Articles'), 'url' => ['/article/index']];
                 $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']];
-                $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
                 $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
             }
 
