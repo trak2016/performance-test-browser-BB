@@ -7,6 +7,8 @@ use giovdk21\yii2SyntaxHighlighter\SyntaxHighlighter as SyntaxHighlighter;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Article */
 /* @var $form yii\widgets\ActiveForm */
+
+
 ?>
 
 <div class="article-form">
@@ -32,6 +34,8 @@ use giovdk21\yii2SyntaxHighlighter\SyntaxHighlighter as SyntaxHighlighter;
         <?= $form->field($model, 'type')->dropDownList($model->typeList) ?>
         
         <?= $form->field($model, 'parent')->textInput(['maxlength' => 255]) ?>
+        
+        <?= $form->field($model, 'rootParent')->textInput(['maxlength' => 255]) ?>
 
     </div>
     </div> 

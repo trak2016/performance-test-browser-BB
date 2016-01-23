@@ -21,7 +21,7 @@ use yii\gii\TypeAheadAsset;
  * @property integer $updated_at
  * @property string $type
  * @property integer $parent
- *
+ * @property integer $rootParent
  * @property User $user
  */
 class Article extends ActiveRecord
@@ -56,7 +56,7 @@ class Article extends ActiveRecord
     {
         return [
             [['user_id', 'title', 'summary', 'content', 'status'], 'required'],
-            [['user_id', 'status', 'category','parent'], 'integer'],
+            [['user_id', 'status', 'category','parent','rootParent'], 'integer'],
             [['summary', 'content','type'], 'string'],
             [['title'], 'string', 'max' => 255]
         ];
