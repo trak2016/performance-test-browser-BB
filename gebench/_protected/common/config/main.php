@@ -1,7 +1,7 @@
 <?php
 return [
-    'name' => 'My Company',
-    //'language' => 'sr',
+    'name' => 'GE Benchmarks',
+    'language' => 'pl',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'assetManager' => [

@@ -6,18 +6,15 @@ $this->title = Yii::t('app', Yii::$app->name);
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully installed Yii2 improved application template</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.freetuts.org/tutorial/view?id=6">Read our tutorial</a></p>
+        <h1>Ge Benchmarks</h1>
+        <p class="lead">Strona poświęcona publikacjom w tematyce tworzenia gier na platformy mobilne</p>
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-3">
-                <h3>Yii documentation</h3>
+                <h3>Kontrolki</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -25,10 +22,10 @@ $this->title = Yii::t('app', Yii::$app->name);
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Sprawdź Kontrolki &raquo;</a></p>
             </div>
             <div class="col-lg-3">
-                <h3>Yii forum</h3>
+                <h3>Testy Wydajnościowe</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -36,10 +33,10 @@ $this->title = Yii::t('app', Yii::$app->name);
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Sprawdź Wydajność &raquo;</a></p>
             </div>
             <div class="col-lg-3">
-                <h3>Yii extensions</h3>
+                <h3>Dyskusje o Frameworku</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -47,10 +44,10 @@ $this->title = Yii::t('app', Yii::$app->name);
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Sprawdź Frameworki &raquo;</a></p>
             </div>
-            <div class="col-lg-3">
-                <h3>Freetuts.org</h3>
+            <div claess="col-lg-3">
+                <h3>Tworzenia GEBENCH</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -58,7 +55,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.freetuts.org/">Freetuts.org &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.freetuts.org/">Zobacz GEBENCH &raquo;</a></p>
             </div>
         </div>
 
