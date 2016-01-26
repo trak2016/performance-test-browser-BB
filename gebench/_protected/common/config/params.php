@@ -11,7 +11,7 @@ return [
      *
      * If set to true users will have to activate their accounts using email account activation.
      */
-    'rna' => false,
+    'rna' => true,
 
     /**
      * Login With Email.
@@ -40,11 +40,11 @@ return [
      * Email used in contact form.
      * Users will send you emails to this address.
      */
-    'adminEmail' => 'admin@example.com', 
+    'adminEmail' => 'info@gebench.c0.pl', 
 
     /**
      * Not used in template.
      * You can set support email here.
      */
-    'supportEmail' => 'support@example.com',
+    'supportEmail' => 'info@gebench.c0.pl',
 ];

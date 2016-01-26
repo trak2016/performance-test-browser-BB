@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Articles');
 <div class="article-index">
 
     <h1><?= Html::encode($this->title) ?> 
-        <span class="small"> - <?= Yii::t('app', 'Zobacz najlepsze tematy!') ?></span> 
+        <span class="small"> - <?= Yii::t('app', 'The best news available') ?></span> 
     </h1>
 
     <hr class="top">

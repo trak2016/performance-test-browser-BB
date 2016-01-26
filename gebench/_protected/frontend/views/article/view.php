@@ -93,13 +93,4 @@ $this->params['breadcrumbs'][] = $this->title;
     },
     ])?>	
 	
-	<!-- Testing part - Can be deleted 
-	<small>
-	<?= '</br>Temporary record info: for testing only'?>
-	<?= DetailView::widget([
-        'model' => $model,
-    ]) ?>
-	</small>
-	 end of Testing part -->	
-	
 </div>

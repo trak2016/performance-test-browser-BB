@@ -1,6 +1,6 @@
 <?php
 return [
-    'name' => 'GE Benchmarks',
+    'name' => 'GE Benchmarks',	
     'language' => 'pl',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
@@ -46,11 +46,11 @@ return [
                     'basePath' => '@common/translations',
                     'sourceLanguage' => 'en',
                 ],
-                'yii' => [
+                /*'yii' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/translations',
                     'sourceLanguage' => 'en'
-                ],
+                ],*/
             ],
         ],
     ], // components

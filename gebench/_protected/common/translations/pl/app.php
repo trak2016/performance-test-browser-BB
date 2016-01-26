@@ -37,59 +37,59 @@ return [
     'Text'    => 'Tekst',
     'Verification Code' => 'Kod weryfikacyjny',
     'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' 
-        => 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.',
-    'Thank you for contacting us. We will respond to you as soon as possible.' => 'Thank you for contacting us. We will respond to you as soon as possible.',
-    'There was an error sending email.' => 'There was an error sending email.',
+        => 'Jeśli masz pytanie, prosimy wypełnić poniższy formularz, aby skontaktować się z nami. Dziękujemy.',
+    'Thank you for contacting us. We will respond to you as soon as possible.' => 'Dziękujemy za skontaktowanie się z nami. Postaramy się odpowiedzieć tak szybko jak to możliwe.',
+    'There was an error sending email.' => 'Wystąpił błąd podczas wysyłania wiadomości e-mail.',
 
     // password reset
-    'If you forgot your password you can' => 'If you forgot your password you can ',
-    'reset it' => 'reset it',
-    'Request password reset' => 'Request password reset',
-    'Please fill out your email.' => 'Please fill out your email.',
-    'Reset password' => 'Reset password',
-    'A link to reset password will be sent to your email.' => 'A link to reset password will be sent to your email.',
-    'Check your email for further instructions.' => 'Check your email for further instructions.',
-    'Please choose your new password:' => 'Please choose your new password:',
-    'New password was saved.' => 'New password was saved.',
-    'Sorry, we are unable to reset password for email provided.' => 'Sorry, we are unable to reset password for email provided.',
-    'Password reset token cannot be blank.' => 'Password reset token cannot be blank.',
-    'Wrong password reset token.' => 'Wrong password reset token.',
+    'If you forgot your password you can' => 'Jeżeli zapomniałeś hasło możesz je ',
+    'reset it' => 'zresetować',
+    'Request password reset' => 'Żądanie resetu hasła',
+    'Please fill out your email.' => 'Proszę podać swój e-mail.',
+    'Reset password' => 'Resetuj hasło',
+    'A link to reset password will be sent to your email.' => 'Link do resetowania hasła zostanie wysłany na adres email.',
+    'Check your email for further instructions.' => 'Twoja poczta zawiera dalsze instrukcje.',
+    'Please choose your new password:' => 'Proszę wybrać nowe hasło:',
+    'New password was saved.' => 'Nowe hasło zostało zapisane.',
+    'Sorry, we are unable to reset password for email provided.' => 'Niestety, nie jesteśmy w stanie zresetować hasła dla podanego adresu e-mail.',
+    'Password reset token cannot be blank.' => 'Token resetowania hasła nie może być pusty.',
+    'Wrong password reset token.' => 'Nieprawidłowy token resetowania hasła.',
 
     // signup
     'Signup'   => 'Rejestruj',
-    'Please fill out the following fields to signup:' => 'Please fill out the following fields to signup:',
-    'We will send you an email with account activation link.' => 'We will send you an email with account activation link.',
-    'We couldn\'t sign you up, please contact us.' => 'We couldn\'t sign you up, please contact us.',
+    'Please fill out the following fields to signup:' => 'Proszę wypełnić poniższe pola, aby się zarejestrować:',
+    'We will send you an email with account activation link.' => 'Wyślemy Ci e-mail z linkiem aktywującym konto.',
+    'We couldn\'t sign you up, please contact us.' => 'Nie mogliśmy cię zarejestrować, prosimy o kontakt.',
 
     // login
     'Remember me'  => 'Zapamiętaj mnie',
-    'Please fill out the following fields to login:' => 'Please fill out the following fields to login:',
-    'You have to activate your account first. Please check your email.' => 'You have to activate your account first. Please check your email.',
+    'Please fill out the following fields to login:' => 'Wypełnij poniższe pola, aby się zalogować:',
+    'You have to activate your account first. Please check your email.' => 'Musisz najpierw aktywować swoje konto. Proszę sprawdzić email.',
     'To be able to log in, you need to confirm your registration. Please check your email, we have sent you a message.'
-        => 'To be able to log in, you need to confirm your registration. Please check your email, we have sent you a message.',
+        => 'Aby móc się zalogować, należy potwierdzić rejestrację. Proszę sprawdzić pocztę, wysłaliśmy do Ciebie wiadomość.',
 
     // account activation
-    'We couldn\'t send you account activation email, please contact us.' => 'We couldn\'t send you account activation email, please contact us.',
-    'Success! You can now log in.' => 'Success! You can now log in.',
-    'for joining us!' => 'for joining us!',
-    'your account could not be activated, please contact us!' => 'your account could not be activated, please contact us!',
-    'Account activation token cannot be blank.' => 'Account activation token cannot be blank.',
-    'Wrong account activation token.' => 'Wrong account activation token.',
+    'We couldn\'t send you account activation email, please contact us.' => 'Nie udało się wysłać e-maila aktywującego konto, skontaktuj się z nami.',
+    'Success! You can now log in.' => 'Sukces! Możesz się teraz zalogować.',
+    'for joining us!' => 'za dołączenie do nas!',
+    'your account could not be activated, please contact us!' => 'twoje konto nie może być aktywowane, skontaktuj się z nami!',
+    'Account activation token cannot be blank.' => 'Token aktywacji konta nie może być pusty.',
+    'Wrong account activation token.' => 'Nieprawidłowy Token aktywacji konta.',
 
     //-- general db fields --//
-    'Created At' => 'Created At',
-    'Updated At' => 'Updated At',
+    'Created At' => 'Utworzony',
+    'Updated At' => 'Zmieniony',
 
     //-- mixed --//
     'GE Bechmark' => 'GE Bechmark',
     'Hello' => 'Witaj',
-    'Thank you' => 'Dziękuję',
+    'Thank you' => 'Dziękujemy',
     
     //-- users management --//
     'Role' => 'Role',
-    'Create User' => 'Create User',
-    'Update User' => 'Update User',
-    'New pwd ( if you want to change it )' => 'New pwd ( if you want to change it )',
+    'Create User' => 'Utworz Użytkownika',
+    'Update User' => 'Zmień Użytkownika',
+    'New pwd ( if you want to change it )' => 'Nowe hasło ( jeśli chcesz zmienić )',
 
     //-- articles --//
     'Title'    => 'Tytuł',
@@ -101,8 +101,8 @@ return [
     'Author'   => 'Autor',
     'articles' => 'publikacje',
     'news'     => 'nowości',
-    'The best news available' => 'Najnowsze dostępne publikacje',
-    'We haven\'t created any articles yet.' => 'We haven\'t created any articles yet.',
+    'The best news available' => 'Zobacz najlepsze tematy!',
+    'We haven\'t created any articles yet.' => 'Nie utworzono jeszcze żadnych tematów.',
     'Read more'    => 'Czytaj więcej',
     'Published on' => 'Data publikacji',
 		
@@ -125,12 +125,12 @@ return [
 	'Categories' => 'Kategorie',
 
     //-- errors --//
-    'The above error occurred while the Web server was processing your request.' => 'The above error occurred while the Web server was processing your request.',
-    'Please contact us if you think this is a server error. Thank you.' => 'Please contact us if you think this is a server error. Thank you.',
-    'You are not allowed to access this page.' => 'You are not allowed to access this page.',
+    'The above error occurred while the Web server was processing your request.' => 'Podczas przetwarzania żądania przez serwer sieciowy wystąpił powyższy błąd.',
+    'Please contact us if you think this is a server error. Thank you.' => 'Prosimy o kontakt z nami, jeśli uważasz, że jest to błąd serwera. Dziękuję.',
+    'You are not allowed to access this page.' => 'Nie masz uprawnień, aby uzyskać dostęp do tej strony.',
 
     //-- delete messages --//
-    'Are you sure you want to delete this user?' => 'Are you sure you want to delete this user?',
-    'Are you sure you want to delete this article?' => 'Are you sure you want to delete this article?',
+    'Are you sure you want to delete this user?' => 'Czy na pewno chcesz usunąć tego użytkownika?',
+    'Are you sure you want to delete this article?' => 'Czy na pewno chcesz usunąć ten artykuł?',
 
 ];
